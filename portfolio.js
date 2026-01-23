@@ -72,21 +72,3 @@ const errorMsg = document.getElementById("errorMsg");
 form.addEventListener("submit", function () {
   window.location.href = "mailto:agboolaferanmi156@gmail.com";
 });
-const backtotop = document.getElementById("backTotop");
-let lastscroll = 0
-window.addEventListener("scroll", function (){
-const currentscroll = window.pageYOffset || document.documentElement.scrollTop;
-if(lastscroll < currentscroll){ 
-    backtotop.classList.add("up");
-    setTimeout(()=> { 
-    backtotop.classList.remove("up");
-    }, 2500);
-}
-else{ 
-    backtotop.classList.remove("up");
-}
-lastscroll = currentscroll;
-});
-backtotop.addEventListener("click", function (){ 
-window.scrollTo({top:0, behavior: "smooth"})
-});
